@@ -6029,7 +6029,12 @@ MORE INFORMATION:
             verbose_fp.write('%sok, with warnings\n' % pfx)
         elif verbose_fp:
             verbose_fp.write("%shas errors\n" % pfx)
-
+        
+        if success == self.SUCCESS_OK:
+            success = True
+        else:
+            success = False
+        
         return success
 
 
